@@ -1,0 +1,110 @@
+
+<!-- Basic HTML structure -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Energy Bowl Builder</title>
+    <link rel="stylesheet" href="style.css">
+ 
+
+   </head>
+<body>
+    <header>
+         <h1> Build your energy bowl</h1>
+       
+         <p>Choose ingredients and get your order description</p>
+       
+        </header>
+
+    <main>
+        <form id="bowl-form">
+           <fieldset>
+
+    <legend>1. Chose your base </legend>
+    <div class="options-group">
+    <label><input type="radio" name="base" value="Acai" required> Acai </label>
+     <label><input type="radio" name="base" value="Yogurt"> Yogurt </label>
+      <label><input type="radio" name="base" value="Oats"> Oats</label>
+       <label><input type="radio" name="base" value="Chia Pudding"> Chia Pudding</label>
+       </div>
+</fieldset>
+
+<fieldset>
+    <legend>2. Add fruits (you can choose several)</legend>
+     <div class="options-group">
+    <label><input type="checkbox" name="fruits" value="banana"> Banana</label>
+     <label><input type="checkbox" name="fruits" value="strawberry"> Strawberry</label>
+      <label><input type="checkbox" name="fruits" value="mango"> Mango</label>
+      <label><input type="checkbox" name="fruits" value="kiwi"> Kiwi</label>
+       <label><input type="checkbox" name="fruits" value="blueberry"> Blueberry</label>
+       </div>
+</fieldset>
+
+<fieldset>
+    <legend>3. Add toppings</legend>
+     <div class="options-group">
+    <label><input type="checkbox" name="toppings" value="Granola"> Granola</label>
+     <label><input type="checkbox" name="toppings" value="Coconut Flakes"> Coconut Flakes</label>
+      <label><input type="checkbox" name="toppings" value="Walnuts"> Walnuts</label>
+      <label><input type="checkbox" name="toppings" value="Chia Seeds"> Chia Seeds</label>
+      <label><input type="checkbox" name="toppings" value="Flax Seeds"> Flax Seeds</label>
+      </div>
+</fieldset>
+
+<fieldset>
+    <legend>4. Add supplements (protein, sweetness)</legend>
+     <div class="options-group">
+    <label><input type="checkbox" name="addons" value="protein"> protein</label>
+     <label><input type="checkbox" name="addons" value="peanut butter"> peanut butter</label>
+      <label><input type="checkbox" name="addons" value="honey"> honey</label>
+      <label><input type="checkbox" name="addons" value="maple syrup"> maple syrup</label>
+</div>
+</fieldset>
+
+<fieldset>
+    <legend>5. Chose size</legend> 
+    <div class="options-group"> 
+    <label><input type="radio" name="size" value="small" required> <small>Small</small></label>
+      <label><input type="radio" name="size" value="medium"> <small>Medium</small></label>
+     <label><input type="radio" name="size" value="large"> <small>Large</small></label>
+     </div>
+</fieldset>
+
+<fieldset>
+    <legend>6. Special requests</legend>
+  <div class="options-group">
+    <textarea name="instructions" rows="3" placeholder="Write if you want to remove or add anything..."></textarea>
+  </div>
+    </fieldset>
+
+   <button type="button" id="clear-history"> Clear Last Order</button>
+
+            <button type="submit"> Order your bowl</button>
+
+ </form>
+
+         <section id="order-output" aria-live="polite">
+       
+            <h2>Your order</h2>
+       
+             <div id="order-details"></div>
+        <div id="order-image">
+      <img src="imgs/vecteezy_a-detailed-watercolor-painting-of-an-empty-wooden-bowl-with_59053731.png" alt="Energy Bowl img" id="bowl-image">
+         
+       </div>
+
+          </section>
+       </main>
+
+    <footer>
+         
+        <p>2026 Energy Bowl Builder. Vadim Cheganov student #200609007. JavaScript Assignment02</p>
+     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

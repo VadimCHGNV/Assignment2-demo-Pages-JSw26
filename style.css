@@ -1,0 +1,155 @@
+/* modern Pastel Palette */
+:root {
+    --bg-color: #fdfcf0; 
+     --accent-color: #a8d5ba; 
+    --secondary-accent: #ffd8cc; 
+    --text-color: #4a4a4a;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+     background: linear-gradient(120deg, #fdfcf0 0%, #e0f2f1 100%);
+     color: var(--text-color);
+      line-height: 1.6;
+     padding: 20px;
+      min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.8rem;
+      color: #2d5a27;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr; 
+      gap: 30px;
+        align-items: start;
+}
+
+/* form Styles with glassmorphism */
+form {
+         background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+     padding: 30px;
+     border-radius: 24px;
+     border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+fieldset {
+    border: none;
+    background: rgba(255,255,255,0.4);
+     padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+ }
+
+legend {
+      font-weight: 700;
+      font-size: 1.1rem;
+     color: #2d5a27;
+     margin-bottom: 10px;
+     padding: 0 5px;
+    }
+
+.options-group {
+     display: flex;
+      flex-wrap: wrap;
+    gap: 12px;
+  }
+
+/* custom checkbox/radio */
+label {
+    background: white;
+    padding: 8px 16px;
+      border-radius: 50px;
+      border: 2px solid transparent;
+     transition: all 0.3s ease;
+     cursor: pointer;
+      font-size: 0.95rem;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+label:hover {
+    background: var(--secondary-accent);
+}
+
+/* style for checked inputs */
+input:checked + span {
+    font-weight: bold;
+}
+
+/* output Section */
+#order-output {
+    position: sticky; /* checked inputs will "follow" the user as they scroll */
+    top: 20px;
+     background: white;
+     padding: 30px;
+         border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      text-align: center;
+}
+
+#bowl-image {
+      width: 100%;
+     max-width: 350px;
+     height: auto;
+     border-radius: 20px;
+     margin-top: 20px;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#bowl-image:hover {
+    transform: scale(1.05);
+}
+
+button {
+    width: 100%;
+     margin-top: 10px;
+    padding: 15px;
+     border-radius: 12px;
+     border: none;
+     font-weight: 700;
+      cursor: pointer;
+     transition: 0.3s;
+  }
+
+button[type="submit"] {
+     background: var(--accent-color);
+      color: #2d5a27;
+  }
+
+button#clear-history {
+    background: #ffecb3;
+   
+    color: #856404;
+  
+}
+
+/* responsive adjustments */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr; 
+    }
+    
+    #order-output {
+        position: static;
+    }
+}
